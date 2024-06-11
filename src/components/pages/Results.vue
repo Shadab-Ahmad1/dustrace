@@ -133,7 +133,7 @@ const resetSelectedTransaction = () => {
             <img src="/src/assets/horse.png" width="200px">
           </div>
         </div>
-        <div class="col-md-6 d-flex justify-content-end">
+        <div class="col-md-6 d-flex justify-content-center">
           <a class="navbar-brand desktop-navbar" href="#">
             <img src="/src/assets/niftylogo.png" alt="Company Logo">
           </a>
@@ -150,7 +150,7 @@ const resetSelectedTransaction = () => {
             <button v-if="session == undefined" key="btnAuth" class="btn" @click="login">
               <img src="/src/assets/login.png">
             </button>
-            <div class="input-group" v-else key="btnAuthElse">
+            <div class="input-group userName" v-else key="btnAuthElse">
               <input type="text" class="input-auth-wallet" readonly :value="session.actor">
               <button class="btn" type="button" @click="logout">LogOut</button>
             </div>
@@ -185,20 +185,7 @@ const resetSelectedTransaction = () => {
     <div class="alert alert-info" v-if="histories == null">Fetching the histories...</div>
     <div class="alert-warning alert" v-else-if="histories!.length == 0">Cannot find any histories...</div>
     <div class="row d-flex justify-content-center align-items-center p-2 py-4">
-      <div class="col-md-6 board d-flex justify-content-center align-items-center text-center ">
-        <div class="mb-3">
-      <label for="transactionSelect" class="form-label"><h2 style="color: aliceblue;">Race History Dropdown</h2></label>
-      <select class="form-select" v-model="selectedTransaction" id="transactionSelect" style="width: 100%;">
-        <option value="">Select a transaction...</option>
-        <option v-for="hist in histories" :value="hist.trx_id">{{ hist.trx_id.toString().substring(0, 20) + "..." }}</option>
-      </select>
-    </div>
-      </div>
-    </div>
-  
-  </div>
-  </section>
-  <div class="modal fade" ref="e_modal" id="history-detail" tabindex="-1">
+      <div class="modal fade" ref="e_modal" id="history-detail" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -239,10 +226,34 @@ const resetSelectedTransaction = () => {
       </div>
     </div>
   </div>
+      <div class="col-md-6 board d-flex justify-content-center align-items-center text-center ">
+        <div class="mb-3">
+      <!-- <label for="transactionSelect" class="form-label"><h2 style="color: aliceblue;">Race History Dropdown</h2></label> -->
+      <img src="/src/assets/niftyraceadmitone.png" width="350px" alt="">
+      <select class="form-select" v-model="selectedTransaction" id="transactionSelect" style="width: 100%;">
+        <option value="">Select a transaction...</option>
+        <option v-for="hist in histories" :value="hist.trx_id">{{ hist.trx_id.toString().substring(0, 20) + "..." }}</option>
+      </select>
+    </div>
+      </div>
+    </div>
+  
+  </div>
+  </section>
 </template>
 
 <style scoped>
 
+body{
+overflow: auto !important;
+}
+
+.modal{
+  position: relative;
+}
+.modal-backdrop {
+    height: auto;
+}
 .mb-n3 {
   margin-bottom: -1rem !important;
 }
@@ -264,16 +275,11 @@ const resetSelectedTransaction = () => {
     background-size: cover; /* or background-size: contain; */
   background-position: top;
   background-repeat: no-repeat;
+  height: 70rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
-}
-
-.board{
-  background-image: url('/src/assets/resultboard.png');
-  background-size: cover;
-  background-position: center;
-  height: 12rem;
-  margin: auto;
-  padding: 1em;
 }
 
 
@@ -306,6 +312,9 @@ const resetSelectedTransaction = () => {
   width: 600px;
 }
 
+#history-detail{
+  height: 80vh;
+}
 
 
 

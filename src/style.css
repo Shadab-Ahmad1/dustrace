@@ -13,3 +13,30 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
+body {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+  
+  .modal-backdrop {
+      height: auto !important;
+  }
+
+  .container{
+    max-width: 100%;
+    padding: 0 0;
+}
+
+.userName input {
+  background: transparent;
+  border: none;
+  flex: unset !important;
+  color: #fff;
+  font-size: 29px;
+  font-weight: 800;
+  margin-left: -46px;
+  margin-top: 4px;
+  width: 65% !important;
+}

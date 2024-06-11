@@ -23,7 +23,7 @@ function ipfsLink(ipfs: String) {
 
 <template>
   <div :class="'card mb-3 ' + (selected ? 'border-primary' : '')">
-    <div class="row g-0 select-area" @click="emits('onSelect', data?.asset_id.toString())">
+    <div class="row g-0 select-area" @click="emits('onSelect', data?.asset_id.toString())" style="background-color: #c8c8c8;">
       <div class="col-md-5 text-center">
         <img :src="ipfsLink(data!.template.immutable_data.img)" alt="" class="img-fluid rounded-start mt-2">
       </div>
@@ -52,7 +52,7 @@ function ipfsLink(ipfs: String) {
         </div>
       </div>
     </div>
-    <div :class="'card-footer ' + (selected ? 'border-primary' : '')" v-if="hideFooter == undefined || hideFooter == false">
+    <div :class="'card-footer ' + (selected ? 'border-primary' : '')" v-if="hideFooter == undefined || hideFooter == false" style="background-color: #9f9f9f;">
       <slot/>
     </div>
   </div>

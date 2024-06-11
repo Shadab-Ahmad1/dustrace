@@ -144,7 +144,7 @@ async function logout() {
 
       </div>
       </div>
-      <div class="col-md-6 d-flex justify-content-end">
+      <div class="col-md-6 d-flex justify-content-center">
         <a class="navbar-brand desktop-navbar" href="#">
         <img src="/src/assets/niftylogo.png" alt="Company Logo" >
       </a>
@@ -159,7 +159,7 @@ async function logout() {
       <div class="col-md-3 login-button">
         <div class="d-flex justify-content-end">
         <button v-if="session == undefined" key="btnAuth" class="btn" @click="login"><img src="/src/assets/login.png"></button>
-        <div class="input-group" v-else key="btnAuthElse">
+        <div class="input-group userName" v-else key="btnAuthElse">
           <input type="text" class="form-control input-auth-wallet" readonly :value="session.actor">
           <button class="btn" type="button" @click="logout">LogOut</button>
         </div>
@@ -244,9 +244,10 @@ async function logout() {
 <style scoped>
 .home {
   background-image: url('./static/BG1_meadows.png');
-  background-size: 106% 100%;
+  background-size: 102% 100%;
   background-position: center;
-  height: 55rem;
+  /* height: 55rem; */
+  padding-bottom: 15rem !important;
 }
 
 .mb-n3 {

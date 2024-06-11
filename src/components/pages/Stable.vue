@@ -440,13 +440,13 @@ async function logout() {
 <template>
     <div class="container headerspecial">
     <div class="row d-flex justify-content-end">
-      <div class="col-md-3">
+      <div class="col-md-3  horse-logo-column">
         <div class="d-flex justify-content-start">
           <img src="/src/assets/horse.png" width="200px">
 
       </div>
       </div>
-      <div class="col-md-6 d-flex justify-content-end">
+      <div class="col-md-6 d-flex justify-content-center">
         <a class="navbar-brand" href="#">
         <img src="/src/assets/niftylogo.png" alt="Company Logo" >
       </a>
@@ -454,7 +454,7 @@ async function logout() {
       <div class="col-md-3">
         <div class="d-flex justify-content-end">
         <button v-if="session == undefined" key="btnAuth" class="btn" @click="login"><img src="/src/assets/login.png"></button>
-        <div class="input-group" v-else key="btnAuthElse">
+        <div class="input-group userName" v-else key="btnAuthElse">
           <input type="text" class="input-auth-wallet" readonly :value="session.actor">
           <button class="btn" type="button" @click="logout">LogOut</button>
         </div>

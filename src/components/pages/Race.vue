@@ -225,7 +225,7 @@ async function logout() {
 
       </div>
       </div>
-      <div class="col-md-6 d-flex justify-content-end">
+      <div class="col-md-6 d-flex justify-content-center">
         <a class="navbar-brand desktop-navbar" href="#">
         <img src="/src/assets/niftylogo.png" alt="Company Logo" >
       </a>
@@ -240,7 +240,7 @@ async function logout() {
       <div class="col-md-3 login-button">
         <div class="d-flex justify-content-end">
         <button v-if="session == undefined" key="btnAuth" class="btn" @click="login"><img src="/src/assets/login.png"></button>
-        <div class="input-group" v-else key="btnAuthElse">
+        <div class="input-group userName" v-else key="btnAuthElse">
           <input type="text" class="input-auth-wallet" readonly :value="session.actor">
           <button class="btn" type="button" @click="logout">LogOut</button>
         </div>
@@ -360,7 +360,7 @@ async function logout() {
               <div class="card">
                 <div class="card-header d-flex justify-content-between">
                   <span>Trifecta</span>
-                  <button class="btn btn-xs btn-primary" @click="trifecta = []">
+                  <button class="btn btn-xs btn-primary me-1" @click="trifecta = []">
                     Clear Select
                   </button>
                 </div>
@@ -388,7 +388,7 @@ async function logout() {
               <div class="card">
                 <div class="card-header d-flex justify-content-between">
                   <span>Win</span>
-                  <button class="btn btn-xs btn-primary" @click="winning = '0'">
+                  <button class="btn btn-xs btn-primary me-1" @click="winning = '0'">
                     Clear Select
                   </button>
                 </div>
@@ -415,10 +415,10 @@ async function logout() {
               </div>
             </div>
           </div>
-          <button class="btn btn-primary" type="button" @click="pickHorse" v-if="activeRace!.usedTicket == null">
+          <button class="btn btn-primary me-1" type="button" @click="pickHorse" v-if="activeRace!.usedTicket == null">
             Pick Horse
           </button>
-          <button class="btn btn-primary" type="button" @click="cancelPickHorse" v-else>
+          <button class="btn btn-primary me-1" type="button" @click="cancelPickHorse" v-else>
             Cancel Pick
           </button>
         </div>
@@ -474,6 +474,15 @@ div.time-block {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 80rem;
+}
+
+.me-1{
+  font-size: 1em !important;
+  font-weight: 700 !important;
+  color:#080808 !important;
+  background-color:#3d8bb9;
+    border-color:#3d8bb9;
+    padding: 8px 5px;
 }
 
 @media (min-width: 992px) {
