@@ -538,7 +538,7 @@ async function logout() {
       </li>
     </ul>
   </div>
-  <div class="card-body" style="margin-bottom: -1rem;">
+  <div class="card-body" style="margin-bottom: -1rem; background-color: #c8c8c8">
     <div v-if="activeTab == 'inventory'">
       <div v-if="myInventory == null" key="inventory-block" class="alert alert-info mb-3">
         Fetching your inventory...
