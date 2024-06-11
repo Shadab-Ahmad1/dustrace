@@ -555,7 +555,7 @@ async function logout() {
             <button type="button" class="btn btn-primary btn-sm me-1" @click="stakeNfts([asset.asset_id.toString()])">
               Stake
             </button>
-            <button type="button" class="btn btn-primary btn-sm" v-if="getNftType(asset.template.template_id.toNumber()) == 'horse'"
+            <button type="button" class="btn btn-primary btn-sm me-1" v-if="getNftType(asset.template.template_id.toNumber()) == 'horse'"
               @click="openUpgrade(asset)">Upgrade</button>
           </NftCard>
         </div>
@@ -569,7 +569,7 @@ async function logout() {
         You don't have any staked nft
       </div>
       <div v-else class="row">
-        <div class="col-md-4 col-sm-6" v-for="asset of myStaked"
+        <div class="col-md-4 col-sm-6" style="background-color: #9f9f9f;" v-for="asset of myStaked"
              :key="'stk'+asset.asset_id">
           <NftCard
               @onSelect="selectStakeNft"
@@ -707,8 +707,9 @@ async function logout() {
 .me-1{
   font-size: 1em;
   font-weight: 700;
-  background-color: rgb(128, 128, 128);
-    border-color: rgb(128, 128, 128);
+  color:#080808;
+  background-color:#3d8bb9;
+    border-color:#3d8bb9;
 }
 
 .nav-link{
@@ -716,8 +717,8 @@ async function logout() {
   font-weight: 600;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: white;
-    background-color: #808080;
+    color: #080808;
+    background-color: #3d8bb9;
 }
 
 .rightcol{
