@@ -446,7 +446,7 @@ async function logout() {
 
 .navbar-nav .nav-item{
   margin-right: 0px !important;
-  margin: 0rem -4rem;
+  margin: 0rem 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
