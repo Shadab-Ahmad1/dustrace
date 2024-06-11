@@ -40,3 +40,9 @@ body {
   margin-top: 4px;
   width: 65% !important;
 }
+
+@media screen and (max-width: 720px) {
+  .userName{
+    justify-content: center;
+  }
+}
