@@ -303,11 +303,11 @@ async function logout() {
   <div class="row" v-else>
     <div class="col-md-4">
       <div class="card mb-3">
-        <div class="card-header">
+        <div class="card-header color-light-gray">
           Race Session
         </div>
         <div class="list-group list-group-flush">
-          <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+          <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center color-light-gray"
              :class="{active: activeRace != null && activeRace.activeSession == race.session_id.toString()}"
              v-for="[idx, race] of Object.entries(races)" :key="`race_${race.session_id}`" @click="loadRaceDetail(race)">
             <div>
@@ -331,10 +331,10 @@ async function logout() {
         Please select session
       </div>
       <div class="card" v-else>
-        <div class="card-header">
+        <div class="card-header color-light-gray">
           Race Detail
         </div>
-        <div class="card-body">
+        <div class="card-body color-light-gray">
           <div class="row">
             <div class="col-md-12" v-if="activeRace.usedTicket == null">
               <div class="form-group mb-3">
@@ -344,7 +344,7 @@ async function logout() {
                     [Level: {{ticket.level}}] {{ticket.asset_id}}
                   </option>
                 </select>
-                <input type="text" readonly class="form-control" value="No Available Ticket" v-else>
+                <input type="text" readonly class="form-control color-dark-gray"style="border-color: rgb(159, 159, 159);" value="No Available Ticket" v-else>
               </div>
             </div>
             <div class="col-md-12" v-else>
@@ -358,16 +358,16 @@ async function logout() {
           <div class="row mb-3">
             <div class="col-md-6 mb-3">
               <div class="card">
-                <div class="card-header d-flex justify-content-between">
+                <div class="card-header d-flex justify-content-between color-dark-gray">
                   <span>Trifecta</span>
                   <button class="btn btn-xs btn-primary me-1" @click="trifecta = []">
                     Clear Select
                   </button>
                 </div>
                 <div class="list-group list-group-flush">
-                  <div class="list-group-item d-flex justify-content-between align-items-center" v-for="horse of activeRace!.horses" :key="`tr_${horse.asset_id}`">
+                  <div class="list-group-item d-flex justify-content-between align-items-center color-dark-gray" v-for="horse of activeRace!.horses" :key="`tr_${horse.asset_id}`">
                     <div>
-                      <input type="checkbox" class="form-check-input me-2" :id="`ck_${horse.asset_id}`"
+                      <input type="checkbox" class="form-check-input me-2 color-dark-gray" :id="`ck_${horse.asset_id}`"
                              :value="horse.asset_id.toString()" v-model="trifecta" :checked="trifecta.includes(horse.asset_id.toString())"
                              :disabled="activeRace.usedTicket != null">
                       <label :for="`ck_${horse.asset_id}`" class="form-check-label">
@@ -386,16 +386,16 @@ async function logout() {
             </div>
             <div class="col-md-6 mb-3">
               <div class="card">
-                <div class="card-header d-flex justify-content-between">
+                <div class="card-header d-flex justify-content-between color-dark-gray">
                   <span>Win</span>
                   <button class="btn btn-xs btn-primary me-1" @click="winning = '0'">
                     Clear Select
                   </button>
                 </div>
                 <div class="list-group list-group-flush">
-                  <div class="list-group-item d-flex justify-content-between align-items-center" v-for="horse of activeRace!.horses" :key="`wn_${horse.asset_id}`">
-                    <div>
-                      <input type="radio" class="form-check-input me-2" :id="`opt_${horse.asset_id}`" :disabled="activeRace!.usedTicket != null"
+                  <div class="list-group-item d-flex justify-content-between align-items-center color-dark-gray" v-for="horse of activeRace!.horses" :key="`wn_${horse.asset_id}`">
+                    <div> 
+                      <input type="radio" class="form-check-input me-2 color-dark-gray" :id="`opt_${horse.asset_id}`" :disabled="activeRace!.usedTicket != null"
                              :value="horse.asset_id.toString()" v-model="winning" :checked="horse.asset_id.toString() == winning">
                       <label :for="`opt_${horse.asset_id}`" class="form-check-label">
                         {{ horse.asset_id }}
@@ -409,7 +409,7 @@ async function logout() {
               </div>
             </div>
             <div class="col-md-12">
-              <div class="alert alert-warning">
+              <div class="alert alert-warning warning-background-color">
                 In order to select both option between Trifecta and Win options, You must state 100,000 DUST to
                 niftyracecom at <a href="https://dustismagic.com" target="stake">dustismagic.com</a>
               </div>
@@ -473,7 +473,8 @@ div.time-block {
   background-size: 100% 100%; /* or background-size: contain; */
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 80rem;
+  min-height: 50rem;
+    padding-bottom: 4rem;
 }
 
 .me-1{

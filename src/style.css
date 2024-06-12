@@ -41,8 +41,103 @@ body {
   width: 65% !important;
 }
 
+.list-group-item.active{
+  background-color: #3d8bb9;
+    border-color: #3d8bb9;
+}
+
+.text-bg-primary {
+  color: #080808 !important;
+  background-color: #3d8bb9!important;
+}
+.color-light-gray{
+  background-color: rgb(200, 200, 200);
+}
+.color-dark-gray{
+  background-color: rgb(159, 159, 159);
+}
+.warning-background-color{
+  background: #cff4fc;
+    border-color: #cff4fc;
+}
+.list-group-item-action:focus, .list-group-item-action:hover {
+  background-color: #3d8bb9;
+    border-color: #3d8bb9;
+}
+
+@media screen and (max-width: 1265px) {
+  .userName{
+    flex-wrap: nowrap;
+  }
+  .userName input {
+    margin-left: -50px;
+    width: 100% !important;
+}
+}
+
+@media screen and (max-width: 1211px) {
+  .userName input {
+    margin-left: -65px;
+}
+}
+
+@media screen and (max-width: 1152px) {
+  .userName input {
+    margin-left: -80px;
+}
+}
+
+@media screen and (max-width: 1095px) {
+  .userName input {
+    margin-left: -97px;
+}
+.social-icons-container{
+    margin-left: -30px;
+}
+}
+
+@media screen and (max-width: 998px) {
+  .userName input {
+    margin-left: -122px;
+}
+.social-icons-container {
+  margin-left: -32px;
+}
+.social-icons-container img{
+  width: 45px !important;
+}
+}
+
+@media screen and (max-width: 920px) {
+  .userName input {
+    margin-left: -140px;
+}
+.social-icons-container img{
+  width: 40px !important;
+}
+.social-icons-container {
+  margin-left: 0;
+}
+.settingbutton{
+  width: 60%;
+}
+}
+
+
+
 @media screen and (max-width: 720px) {
   .userName{
     justify-content: center;
   }
+  .userName input {
+    margin-left: 0;
+    font-size: 22px;
+    margin-left: -1rem;
+}
+.social-icons-container img {
+  width: 60px !important;
+}
+.settingbutton {
+  width: 100%;
+}
 }

@@ -657,9 +657,10 @@ async function logout() {
 
 .bodycontainer{
   background-image: url('/src/assets/background-horizontal.png');
-  background-size: 100% 100%;
-  background-position: center;
-  min-height: 20rem;
+  background-size: cover;
+  background-position: top;
+  min-height: 80vh;
+  padding-bottom: 6rem;
 }
 
 

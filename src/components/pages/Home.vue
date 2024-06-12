@@ -244,10 +244,10 @@ async function logout() {
 <style scoped>
 .home {
   background-image: url('./static/BG1_meadows.png');
-  background-size: 102% 100%;
+  background-size: cover;
   background-position: center;
-  /* height: 55rem; */
-  padding-bottom: 15rem !important;
+  min-height: 75vh;
+  padding-bottom: 4rem !important;
 }
 
 .mb-n3 {

@@ -275,7 +275,7 @@ overflow: auto !important;
     background-size: cover; /* or background-size: contain; */
   background-position: top;
   background-repeat: no-repeat;
-  height: 70rem;
+  min-height: 70vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -313,7 +313,7 @@ overflow: auto !important;
 }
 
 #history-detail{
-  height: 80vh;
+  height: 100%;
 }
 
 
