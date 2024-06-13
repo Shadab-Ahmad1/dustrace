@@ -232,8 +232,8 @@ async function logout() {
       <div class="mobile-view-navbar">
         <a href="">
         <img src="/src/assets/nifty.png" style="width:200px; height: 40px" alt="nifty" >
-        <img src="/src/assets/niftyhomelogo.png" style="width: 135px; height: 121px; margin-top: -30px;" alt="home" >
-        <img src="/src/assets/race.png" style="width: 200px; margin-top: -30px; height: 40px" alt="home" >
+        <img class="shelterImage" src="/src/assets/niftyhomelogo.png" style="width: 135px; height: 121px; margin-top: -30px;" alt="home" >
+        <img class="race" src="/src/assets/race.png" style="width: 200px; margin-top: -30px; height: 40px" alt="home" >
       </a>
       </div>
       </div>
@@ -339,12 +339,12 @@ async function logout() {
             <div class="col-md-12" v-if="activeRace.usedTicket == null">
               <div class="form-group mb-3">
                 <label for="available" class="control-label">Your Available Ticket</label>
-                <select class="form-control" v-model="ticket_id" v-if="activeRace.availableTicket.length > 0">
+                <select class="form-control color-dark-gray" style="border-color: rgb(159, 159, 159);"  v-model="ticket_id" v-if="activeRace.availableTicket.length > 0">
                   <option :value="ticket.asset_id.toString()" v-for="ticket of activeRace.availableTicket">
                     [Level: {{ticket.level}}] {{ticket.asset_id}}
                   </option>
                 </select>
-                <input type="text" readonly class="form-control color-dark-gray"style="border-color: rgb(159, 159, 159);" value="No Available Ticket" v-else>
+                <input type="text" readonly class="form-control color-dark-gray" style="border-color: rgb(159, 159, 159);" value="No Available Ticket" v-else>
               </div>
             </div>
             <div class="col-md-12" v-else>
@@ -360,8 +360,8 @@ async function logout() {
               <div class="card">
                 <div class="card-header d-flex justify-content-between color-dark-gray">
                   <span>Trifecta</span>
-                  <button class="btn btn-xs btn-primary me-1" @click="trifecta = []">
-                    Clear Select
+                  <button class="btn btn-xs btn-primary me-1 px-4" @click="trifecta = []">
+                    Clear
                   </button>
                 </div>
                 <div class="list-group list-group-flush">
@@ -388,8 +388,8 @@ async function logout() {
               <div class="card">
                 <div class="card-header d-flex justify-content-between color-dark-gray">
                   <span>Win</span>
-                  <button class="btn btn-xs btn-primary me-1" @click="winning = '0'">
-                    Clear Select
+                  <button class="btn btn-xs btn-primary me-1 px-4" @click="winning = '0'">
+                    Clear
                   </button>
                 </div>
                 <div class="list-group list-group-flush">
@@ -410,8 +410,7 @@ async function logout() {
             </div>
             <div class="col-md-12">
               <div class="alert alert-warning warning-background-color">
-                In order to select both option between Trifecta and Win options, You must state 100,000 DUST to
-                niftyracecom at <a href="https://dustismagic.com" target="stake">dustismagic.com</a>
+                In order to select both options you must stake 100,000 DUST to niftyracecom  at <a href="https://dustismagic.com" target="stake">dustismagic.com</a>
               </div>
             </div>
           </div>
@@ -561,7 +560,7 @@ div.time-block {
 }
 .headerspecial{
   width: 100%;
-  background-size: 100%;
+  background-size: 102%;
   background-repeat: repeat;
 }
 

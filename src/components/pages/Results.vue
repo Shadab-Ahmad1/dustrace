@@ -140,8 +140,8 @@ const resetSelectedTransaction = () => {
           <div class="mobile-view-navbar">
         <a href="">
         <img src="/src/assets/nifty.png" style="width:200px; height: 40px" alt="nifty" >
-        <img src="/src/assets/niftyhomelogo.png" style="width: 135px; height: 121px; margin-top: -30px;" alt="home" >
-        <img src="/src/assets/race.png" style="width: 200px; margin-top: -30px; height: 40px" alt="home" >
+        <img class="shelterImage" src="/src/assets/niftyhomelogo.png" style="width: 135px; height: 121px; margin-top: -30px;" alt="home" >
+        <img class="race" src="/src/assets/race.png" style="width: 200px; margin-top: -30px; height: 40px" alt="home" >
       </a>
       </div>
         </div>
@@ -405,7 +405,7 @@ overflow: auto !important;
 }
 .headerspecial{
   width: 100%;
-  background-size: 100%;
+  background-size: 102%;
   background-repeat: repeat;
 }
 

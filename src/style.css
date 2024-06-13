@@ -18,6 +18,8 @@
 body {
   overflow-y: auto !important;
   overflow-x: hidden;
+  padding-right: 0px !important;
+
 }
   
   .modal-backdrop {
@@ -89,7 +91,7 @@ body {
 
 @media screen and (max-width: 1095px) {
   .userName input {
-    margin-left: -97px;
+    margin-left: -105px;
 }
 .social-icons-container{
     margin-left: -30px;
@@ -98,7 +100,7 @@ body {
 
 @media screen and (max-width: 998px) {
   .userName input {
-    margin-left: -122px;
+    margin-left: -130px;
 }
 .social-icons-container {
   margin-left: -32px;
@@ -139,5 +141,12 @@ body {
 }
 .settingbutton {
   width: 100%;
+}
+.mobile-view-navbar .shelterImage{
+  margin-top: -20px !important;
+  width: 110px !important;
+}
+.mobile-view-navbar .race{
+  margin-top: -18px !important;
 }
 }

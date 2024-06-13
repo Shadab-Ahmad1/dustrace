@@ -717,6 +717,7 @@ async function logout() {
 @media screen and (max-width: 720px) {
 .headerspecial{
   width: 100%;
+  background-size: 102%;
 }
 
 .navbar-brand{

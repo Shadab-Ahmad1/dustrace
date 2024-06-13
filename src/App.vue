@@ -60,9 +60,9 @@ async function logout() {
           <div class="mobile-view-footer">
             <a href="">
               <img src="/src/assets/nifty.png" style="width:200px; height: 40px" alt="nifty">
-              <img src="/src/assets/niftyhomelogo.png" style="width: 135px; height: 121px; margin-top: -30px;"
+              <img class="shelterImage" src="/src/assets/niftyhomelogo.png" style="width: 135px; height: 121px; margin-top: -30px;"
                 alt="home">
-              <img src="/src/assets/race.png" style="width: 200px; margin-top: -30px; height: 40px" alt="home">
+              <img class="race" src="/src/assets/race.png" style="width: 200px; margin-top: -30px; height: 40px" alt="home">
             </a>
           </div>
         </div>
@@ -201,8 +201,8 @@ footer {
   }
   footer {
     background-image: url('./assets/wood.png');
-    background-size: 100% 66%;
-    background-position: 100% 100%;
+    background-size: 102% 66%;
+    background-position: center;
 }
 
 .social-icons-whole-container{
@@ -214,6 +214,13 @@ justify-content: space-evenly;
 }
 .main-footer{
   justify-content: center !important;
+}
+.mobile-view-footer .shelterImage{
+  margin-top: -20px !important;
+  width: 110px !important;
+}
+.mobile-view-footer .race{
+  margin-top: -18px !important;
 }
 }
 </style>
