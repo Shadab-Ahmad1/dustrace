@@ -22,21 +22,21 @@ const router = createRouter({
       path: "/race",
       component: Race,
       meta: {
-        requireAuth: true
+        requireAuth: false
       }
     },
     {
       path: "/stable",
       component: Inventory,
       meta: {
-        requireAuth: true
+        requireAuth: false
       }
     },
     {
       path: "/inventory",
       component: Inventory,
       meta: {
-        requireAuth: true
+        requireAuth: false
       }
     },
   ]
