@@ -81,11 +81,24 @@ body {
   .userName input {
     margin-left: -65px;
 }
+
+.second-row{
+  min-height: 193px;
+}
+.second-row .second{
+  min-height: 145px;
+}
+.third-row{
+  min-height: 185px;
+}
 }
 
 @media screen and (max-width: 1152px) {
   .userName input {
     margin-left: -80px;
+}
+.third-row .textwhite{
+  font-size: 18px !important;
 }
 }
 
@@ -96,6 +109,24 @@ body {
 .social-icons-container{
     margin-left: -30px;
 }
+}
+
+@media screen and (max-width: 1060px) {
+  .third-row .textwhite{
+    font-size: 17px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .second-row .second {
+    min-height: 165px;
+}
+}
+
+@media screen and (max-width: 1010px) {
+  .third-row .textwhite{
+    font-size: 16.5px !important;
+  }
 }
 
 @media screen and (max-width: 998px) {
@@ -148,5 +179,8 @@ body {
 }
 .mobile-view-navbar .race{
   margin-top: -18px !important;
+}
+.first-image-content{
+  margin-top: 3rem;
 }
 }
