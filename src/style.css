@@ -180,7 +180,40 @@ body {
 .mobile-view-navbar .race{
   margin-top: -18px !important;
 }
-.first-image-content{
-  margin-top: 3rem;
+
+.home{
+  background-size: 159% 100% !important;
+  background-position: 0% 100% !important;
+  background-repeat: no-repeat;
+}
+.first-row{
+  margin-top: 17rem;
+}
+.second-row {
+  margin-top: 2rem;
+  flex-direction: column-reverse;
+}
+
+.first-image-content {
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+  font-size: 16px !important;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.second-image-content {
+  font-size: 16px !important;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1rem;
+}
+
+.third-image-content {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 }

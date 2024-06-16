@@ -208,7 +208,7 @@ async function logout() {
       </div>
 
     </div>
-    <div class="row py-lg-5 align-content-center justify-content-center mx-auto">
+    <div class="row py-lg-5 align-content-center justify-content-center mx-auto first-row">
       <div class="col-lg-6 col-md-8 first">
         <a href="/stable" @mouseover="liveText(true)" @mouseout="liveText(false)"><img src="/src/assets/stable.png"></a>
       </div>
@@ -220,9 +220,9 @@ async function logout() {
       </div>
     </div>
 
-    <div class="row  align-content-center justify-content-center mx-auto second-row">
+    <div class="row align-content-center justify-content-center mx-auto second-row">
       <div class="col-lg-6 col-md-8 align-content-center justify-content-center mx-auto">
-        <p class="textwhite first-image-content" id="hiddenText1" v-show="showText1">
+        <p class="textwhite second-image-content" id="hiddenText1" v-show="showText1">
           Welcome to the NiftyRace Ticket Booth! Get your tickets to the thrilling horse races. Purchase now and secure
           your spot in the races for incredible rewards. Don't miss out on the excitement - Get your ticket today!
         </p>
@@ -239,7 +239,7 @@ async function logout() {
           <img src="/src/assets/winnerse2.png"></a>
       </div>
       <div class="col-lg-6 col-md-8 align-content-center justify-content-center mx-auto">
-        <p class="textwhite" id="hiddenText2" v-show="showText2">
+        <p class="textwhite third-image-content" id="hiddenText2" v-show="showText2">
           Welcome to the Nifty Race Results Page! Check out the latest race outcomes and see how your favorite ponies
           performed on the track. See how the action unfolded, positions for both racers and spectators and DUST prizes.
           Whether you're celebrating victory or analyzing past performances, this is your go-to destination for all
@@ -440,21 +440,12 @@ async function logout() {
   }
 
 
-  .first img {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .second img {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .third img {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
+.first img,
+.second img,
+.third img{
+  width: 75% !important;
+  max-width: 100% !important;
+}
   .navbar-nav .nav-item {
     margin: 0rem 0rem !important;
     font-size: 1em;
