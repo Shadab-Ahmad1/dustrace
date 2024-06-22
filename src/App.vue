@@ -69,9 +69,9 @@ async function logout() {
         <div class="col-md-7 justify-content-between d-flex align-items-center socials-section">
           <div class="social-icons-whole-container">
             <div class="social-icons-container">
-              <a href=""><img src="/src/assets/twitter.svg" width="60px" class="socialicon"></a>
-              <a href=""><img src="/src/assets/telegram.svg" width="60px" class="socialicon"></a>
-              <a href=""><img src="/src/assets/youtube.svg" width="60px" class="socialicon"></a>
+              <a href="https://x.com/NiftyRacers?t=zuhQOy5ZCsY98vF8pdsu2w&s=09" target="_blank" ><img src="/src/assets/twitter.svg" width="60px" class="socialicon"></a>
+              <a href="https://t.me/niftyracecom" target="_blank"><img src="/src/assets/telegram.svg" width="60px" class="socialicon"></a>
+              <a href="https://youtube.com/@niftyrace?si=B8LpW22119tfixL7" target="_blank"><img src="/src/assets/youtube.svg" width="60px" class="socialicon"></a>
 
             </div>
           </div>
